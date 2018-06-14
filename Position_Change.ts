@@ -44,6 +44,9 @@ pitches = [0, 0, 0, 0, 0]
 for (counter = 0; counter < 5; counter++) {
     readRotation()
 }
+// The main loop compares the current pitch and roll to the averages
+// and switches the LED on or off based on the amount of difference.
+// Then it calls the named function to update the averages.
 basic.forever(() => {
     if (Math.abs(averagePitch - input.rotation(Rotation.Pitch)) > 10 
     || Math.abs(averageRoll - input.rotation(Rotation.Roll)) > 10) 
