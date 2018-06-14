@@ -38,7 +38,7 @@ function readRotation() {
 }
 // This code appears in the Start block
 let counter = 0
-readingIndex = 0
+arrayIndex = 0
 rolls = [0, 0, 0, 0, 0]
 pitches = [0, 0, 0, 0, 0]
 for (counter = 0; counter < 5; counter++) {
