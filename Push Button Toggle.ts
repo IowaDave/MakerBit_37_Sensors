@@ -4,6 +4,8 @@
 // To demonstrate using code to make a simply push button
 // function as a toggle switch.
 //
+// Target: MakeCode Javascript editor for micro:bit
+//
 // David Sparks     June 21, 2018
 // **********************************************************
 //
