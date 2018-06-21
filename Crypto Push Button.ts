@@ -4,6 +4,8 @@
 // Demonstrates coding to make a simple push button
 // require a user code to activate a switch.
 // The code counts the number of button presses in a short time. 
+//
+// Target: MakeCode Javascript editor for micro:bit
 // 
 // David Sparks   June 21, 2018
 // *************************************************************
