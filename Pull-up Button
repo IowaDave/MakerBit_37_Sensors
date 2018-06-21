@@ -1,0 +1,18 @@
+// ***************************************************
+// MakerBit example | Push button
+//
+// David Sparks June 21, 2018
+// ***************************************************
+
+let ButtonState = 0
+ButtonState = pins.digitalReadPin(DigitalPin.P8)
+pins.digitalWritePin(DigitalPin.P16, 0)
+// Loop
+basic.forever(() => {
+    ButtonState = pins.digitalReadPin(DigitalPin.P8)
+    if (ButtonState > 0) {
+        pins.digitalWritePin(DigitalPin.P16, 0)
+    } else {
+        pins.digitalWritePin(DigitalPin.P16, 1)
+    }
+})
