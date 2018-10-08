@@ -13,10 +13,10 @@
 //**********************************************************
 // startup code runs just one time
 // this part creates the variables
-let intervalBetweenClicks = 0
-let microSecondsInACycle = 0
 let pitchFrequency = 0
 let soundTime = 0
+let microSecondsInACycle = 0
+let intervalBetweenClicks = 0
 let noteDuration = 0
 //
 // this part initializes two variables. Change them to see what happens.
@@ -31,14 +31,17 @@ intervalBetweenClicks = microSecondsInACycle / 2
 // main program loop runs repeatedly
 basic.forever(() => {
     soundTime = noteDuration
+    // make noise
     while (soundTime > 0) {
+        // click the buzzer on
         pins.digitalWritePin(DigitalPin.P5, 1)
         control.waitMicros(intervalBetweenClicks)
+        // click the buzzer off
         pins.digitalWritePin(DigitalPin.P5, 0)
         control.waitMicros(intervalBetweenClicks)
+        // count down the remaining time
         soundTime = soundTime - microSecondsInACycle
     }
+    // pause silently after the tone ends
     control.waitMicros(noteDuration)
 })
-
-  
